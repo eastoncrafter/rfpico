@@ -112,10 +112,6 @@ def slave():
     print("NRF24L01 slave mode, waiting for packets... (ctrl-C to stop)")
 
     while True:
-    led.value = True
-    time.sleep(5)
-    led.value = False
-    time.sleep(5)
         if nrf.any():
             while nrf.any():
                 buf = nrf.recv()
@@ -163,10 +159,10 @@ import time
 led = digitalio.DigitalInOut(board.LED)
 led.direction = digitalio.Direction.OUTPUT
 
-def blinkled() {
+def blinkled():
     led.value = True
     time.sleep(5)
     led.value = False
     time.sleep(5)
-    }
+s
     
